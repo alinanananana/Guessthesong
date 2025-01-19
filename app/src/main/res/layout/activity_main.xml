@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6EFF1"
+    android:padding="16dp">
+
+    <!-- Кнопка справки -->
+    <ImageButton
+        android:id="@+id/helpButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/help"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="Справка"
+        android:padding="8dp" />
+
+    <!-- Логотип -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Кнопка начать игру -->
+    <Button
+        android:id="@+id/startGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logoImage"
+        android:layout_marginTop="16dp"
+        android:text="Начать игру"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF50407B"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:paddingStart="48dp"
+        android:paddingEnd="48dp"
+        android:elevation="4dp" />
+</RelativeLayout>

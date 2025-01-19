@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCF1FA">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/biddingHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF6750A3"
+        android:padding="18dp"
+        android:text="ТОРГ ЗА ВРЕМЯ ПРОСЛУШИВАНИЯ"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="top" />
+
+    <!-- Основной контент -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+
+        <!-- Текст хода -->
+        <TextView
+            android:id="@+id/playerTurnTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Игрок 1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:textColor="#333333" />
+
+        <!-- Аватар игрока -->
+        <ImageView
+            android:id="@+id/playerAvatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/player1"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+
+
+        <!-- Поле ввода ставки -->
+        <EditText
+            android:id="@+id/bidInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите ставку от 1 до 20 сек."
+            android:inputType="number"
+            android:gravity="center"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:textColor="#333333"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Кнопка подтверждения -->
+        <Button
+            android:id="@+id/submitBidButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Подтвердить"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCF1FA">
+
+    <!-- Заголовок (ХОД ИГРОКА 1) -->
+    <TextView
+        android:id="@+id/playerTurnTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F69FA5"
+        android:gravity="center"
+        android:padding="18dp"
+        android:text="ХОД ИГРОКА 1"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Основное содержимое -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Секция очков -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Увеличенные аватарки Игрока 1 -->
+            <ImageView
+                android:id="@+id/player1Avatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/player1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/versusText"/>
+
+            <TextView
+                android:id="@+id/scorePlayer1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Игрок 1: 0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/player1Avatar"
+                app:layout_constraintStart_toStartOf="@id/player1Avatar"
+                app:layout_constraintTop_toBottomOf="@id/player1Avatar" />
+
+            <!-- Текст VS -->
+            <TextView
+                android:id="@+id/versusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:text="VS"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@id/player1Avatar"
+                app:layout_constraintEnd_toStartOf="@id/player2Avatar"
+                app:layout_constraintStart_toEndOf="@id/player1Avatar"
+                app:layout_constraintBottom_toBottomOf="@id/player1Avatar"/>
+
+            <!-- Увеличенные аватарки Игрока 2 -->
+            <ImageView
+                android:id="@+id/player2Avatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/player2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/versusText"/>
+
+            <TextView
+                android:id="@+id/scorePlayer2TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Игрок 2: 0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/player2Avatar"
+                app:layout_constraintStart_toStartOf="@id/player2Avatar"
+                app:layout_constraintTop_toBottomOf="@id/player2Avatar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Вопрос -->
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Как называется эта песня?"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Кнопки ответа -->
+        <Button
+            android:id="@+id/answerButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp"
+            android:text="Ответ 1"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/answerButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp"
+            android:text="Ответ 2"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/answerButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp"
+            android:text="Ответ 3"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/answerButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp"
+            android:text="Ответ 4"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>
